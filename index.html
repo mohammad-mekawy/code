@@ -27,10 +27,24 @@
         <option id="j1-1-4" value="j1-1-4">issue4</option>
     </select>
 
+    <form action="">
+        <button id="mek" type="submit">download</button>
+    </form>
+
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <script>
+        var tar = document.getElementById("mek");
+
+        tar.addEventListener('click', function () {
+            var link = document.createElement('a');
+            link.href = 'Galadar.pdf';
+            link.download = 'Galadar.pdf';
+            link.dispatchEvent(new MouseEvent('click'));
+        })
+    </script>
 </body>
 
 </html>
